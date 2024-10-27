@@ -1,0 +1,22 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.is-up {
+  transform: rotate(180deg);
+}
+
+.is-down {
+  transform: rotate(0deg);
+}
+
+.is-left {
+  transform: rotate(90deg);
+}
+
+.is-right {
+  transform: rotate(-90deg);
+}
