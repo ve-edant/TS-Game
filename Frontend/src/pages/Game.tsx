@@ -116,17 +116,20 @@ const Game: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white">
-      <h1 className="text-3xl font-bold">Round {roundNumber}</h1>
+      <h1 className="text-3xl font-bold">Round {roundNumber || round}</h1>
 
       {/* Displaying Arrow Sequence */}
-      <div className="mt-6 flex flex-wrap justify-center gap-2 sm:gap-4 max-w-full overflow-hidden">
+      <div className="mt-6 flex flex-wrap justify-center gap-6 sm:gap-8 w-full md:w-[80vw] mx-auto p-4">
         {sequence.map((arrow, index) => (
+          <div
+            key={index}
+            className="flex justify-center items-center w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32"
+          >
             <NewSvg
-              key={index}
               direction={arrowData[arrow] as "up" | "down" | "left" | "right"}
               isActive={activeArrows[index]}
-              className="w-10 sm:w-14 md:w-16 h-10 sm:h-14 md:h-16" // Responsive size
             />
+          </div>
         ))}
       </div>
 
