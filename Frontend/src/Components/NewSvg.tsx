@@ -2,10 +2,12 @@ import React from 'react';
 
 type NewSvgProps = {
   direction: "up" | "down" | "left" | "right";
-  isActive: boolean; // Prop to indicate if the arrow is active
+  isActive?: boolean; // Prop to indicate if the arrow is active
+  heightSvg?:number;
+  widthSvg?:number;
 };
 
-const NewSvg: React.FC<NewSvgProps> = ({ direction, isActive }) => {
+const NewSvg: React.FC<NewSvgProps> = ({ direction, isActive , heightSvg,  widthSvg}) => {
   // Function to determine the SVG path and its fill color based on isActive
   const getSvgPath = () => (
     <path
@@ -18,10 +20,11 @@ const NewSvg: React.FC<NewSvgProps> = ({ direction, isActive }) => {
     <div>
       <svg
         className={`is-${direction}`} // Optional: Add classes based on direction
-        width="120"
-        height="120"
+        width= {widthSvg || "120"}
+        height={heightSvg || "120"}
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        
       >
         {getSvgPath()}
       </svg>

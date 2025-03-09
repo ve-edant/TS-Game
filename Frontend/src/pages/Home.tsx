@@ -5,7 +5,7 @@ const Home: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-900 text-white">
       <h1 className="text-4xl font-bold mb-6">Arrow Sequence Game</h1>
       <div className="flex space-x-4">
         <button 
