@@ -121,12 +121,12 @@ const Game: React.FC = () => {
       {/* Displaying Arrow Sequence */}
       <div className="mt-6 flex flex-wrap justify-center gap-2 sm:gap-4 max-w-full overflow-hidden">
         {sequence.map((arrow, index) => (
-          <NewSvg
-            key={index}
-            direction={arrowData[arrow] as "up" | "down" | "left" | "right"}
-            isActive={activeArrows[index]}
-            className="w-10 sm:w-14 md:w-16 h-10 sm:h-14 md:h-16" // Responsive size
-          />
+            <NewSvg
+              key={index}
+              direction={arrowData[arrow] as "up" | "down" | "left" | "right"}
+              isActive={activeArrows[index]}
+              className="w-10 sm:w-14 md:w-16 h-10 sm:h-14 md:h-16" // Responsive size
+            />
         ))}
       </div>
 
